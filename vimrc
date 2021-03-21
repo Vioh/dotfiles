@@ -1,18 +1,56 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "
-" Good links:
+" Dependencies that need to be installed:
+" (*) vim (version 8.0 or above)
+" (*) vim-gtk (to make vim work with system clipboard for copying)
+"
+" Plugins that need to be installed (clone these repos to ~/.vim/pack/<some-name>/start/):
+" (*) https://github.com/preservim/nerdcommenter
+"
+" Good general links:
 " (*) https://vim.fandom.com/wiki/Vim_Tips_Wiki
 " (*) https://github.com/technicalpickles/pickled-vim
 "
+" Search and replace:
+" (*) Introduction video: https://www.youtube.com/watch?v=9Sodnanx_yI
+" (*) Comprehensive guide: https://vim.fandom.com/wiki/Search_and_replace
+"
+" Copy and paste:
+" (*) Introduction video: https://www.youtube.com/watch?v=5RXLRzo0Skg
+" (*) Comprehensive guide: https://vim.fandom.com/wiki/Copy,_cut_and_paste
+" (*) In normal mode:
+"     - To cut a line, use 'dd'
+"     - To copy a line, use 'yy'
+"     - To paste a line after the cursor, use 'p'
+"     - To paste a line before the cursor, use 'shift-p'
+" (*) In visual mode:
+"     - To cut the selection, use 'd'
+"     - To copy the selection, use 'y'
+"     - To paste the selection after the cursor, use 'p'
+"     - To paste the selection before the cursor, use 'shift-p'
+"
 " TODO:
-" (*) How to search and replace (also with regex)?
-" (*) How to do multiline editing?
-" (*) How to toggle comments?
-" (*) Create shortcuts for entering highlight/visual mode, visual-line mode, and visual-block mode.
+" (*) Jump: https://vi.stackexchange.com/questions/3052/how-to-jump-only-in-currently-open-file
+" (*) How to set a bookmark and return to it later?
+" (*) Code navigation for common languages (C++/Java/Python)?
+" (*) Display filetree with NERDTree? Also how to browse/search through some files from within Vim?
+" (*) Best and easiest way to do multiline editing (both inserting and deleting)?
 "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" Ctrl-S to save a file
+" Press F4 to quit (ignoring all unsaved changes)
+noremap <F4> :q!<CR>
+inoremap <F4> <Esc>:q!<CR>
+
+" Press F5 to reload this configuration file
+noremap <F5> :source ~/.vimrc<CR>
+inoremap <F5> <C-O>:source ~/.vimrc<CR>
+
+" Use Ctrl+E to enter visual mode
+noremap <C-E> :normal! v<CR>
+inoremap <C-E> <C-O>:normal! v<CR>
+
+" Save a file with Ctrl-S
 " Remember to add the following to your bashrc file to free up Ctrl+S and Ctrl+Q:
 "    stty stop ''
 "    stty start ''
@@ -21,26 +59,26 @@
 noremap <C-S> :w<CR>
 inoremap <C-S> <C-O>:w<CR>
 
-" Ctrl-K to remove a line
+" Remove a line with Ctrl-K
 noremap <C-K> dd
 inoremap <C-K> <C-O>dd
 
-" Ctrl-U and Ctrl-Y to undo and redo
+" Undo and Redo with Ctrl-U and Ctrl-Y
 noremap <C-U> u
 noremap <C-Y> <C-R>
 inoremap <C-U> <C-O>u
 inoremap <C-Y> <C-O><C-R>
 
-" Ctrl-A to highlight the entire file
+" Highlight the entire file with Ctrl-A
 noremap <C-A> ggVG
 inoremap <C-A> <Esc>ggVG
 
-" Ctrl-L to toggle line numbers (numbers will be shown by default)
+" Toggle line numbers with Ctrl-L (numbers will be shown by default)
 noremap <C-L> :set invnumber<CR>
 inoremap <C-L> <C-O>:set invnumber<CR>
 set number
 
-" Ctrl-Shift-Up/Down to move line(s) up and down in different modes
+" Move line(s) up and down with Ctrl-Shift-Up/Down
 nnoremap <C-S-Down> :m .+1<CR>==
 nnoremap <C-S-Up> :m .-2<CR>==
 inoremap <C-S-Down> <Esc>:m .+1<CR>==gi
@@ -48,15 +86,52 @@ inoremap <C-S-Up> <Esc>:m .-2<CR>==gi
 vnoremap <C-S-Down> :m '>+1<CR>gv=gv
 vnoremap <C-S-Up> :m '<-2<CR>gv=gv
 
-" Tab and Shift-Tab to fix lines indentations
-noremap <Tab> :><CR>
-noremap <S-Tab> :<<CR>
-vnoremap <Tab> >gv
-vnoremap <S-Tab> <gv
+" Use '>' and '<' to modify lines indentations (supported only in normal/visual mode)
+nnoremap > :><CR>
+nnoremap < :<<CR>
+vnoremap > >gv
+vnoremap < <gv
 
-" Use 4 spaces instead of tabs
+" Jump back and forth with Ctrl-Shift-Left/Right
+noremap <C-S-Left> <C-O>
+noremap <C-S-Right> <C-I>
+inoremap <C-S-Left> <Esc><C-O>
+inoremap <C-S-Right> <Esc><C-I>
+
+" Use Ctrl-H toggle highlighting on/off on search results
+noremap <C-H> :set hlsearch! hlsearch?<CR>
+inoremap <C-H> <C-O>:set hlsearch! hlsearch?<CR>
+
+" Automatically highlight all unwanted spaces
+highlight ExtraWhitespace ctermbg=red guibg=red
+autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
+autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+
+" Toggle comments with Ctrl-R (remember to install NERDCommenter plugin)
+noremap <C-R> :call NERDComment(0, "toggle")<CR>
+inoremap <C-R> <C-O>:call NERDComment(0, "toggle")<CR>
+filetype plugin on
+let g:NERDSpaceDelims = 1
+let g:NERDDefaultAlign = "left"
+let g:NERDToggleCheckAllLines = 1
+
+" Use 4 spaces instead of tabs and setup autoindent
 set tabstop=4 softtabstop=4 shiftwidth=4 expandtab
+set autoindent
 
 " Incremental search to search faster
 " Use '/' in normal mode to search, then 'n' and 'shift-n' to find next/previous
 set incsearch
+
+" Allow to copy straight to the clipboard (only available if 'vim-gtk' is installed)
+" To copy and paste a highlighted text in visual mode, use 'y' to yank, and 'p' to paste
+set clipboard=unnamedplus
+
+" Remove delay when using Esc key
+set ttimeoutlen=0
+
+" Choose color scheme (see /usr/share/vim/vim*/colors for available ones)
+" Best preinstalled schemes for Ubuntu terminal: ron, delek, slate, elflord, desert, koehler
+colorscheme ron
