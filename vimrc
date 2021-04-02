@@ -79,12 +79,12 @@ inoremap <C-L> <C-O>:set invnumber<CR>
 set number
 
 " Move line(s) up and down with Ctrl-Shift-Up/Down
-nnoremap <C-S-Down> :m .+1<CR>==
-nnoremap <C-S-Up> :m .-2<CR>==
-inoremap <C-S-Down> <Esc>:m .+1<CR>==gi
-inoremap <C-S-Up> <Esc>:m .-2<CR>==gi
-vnoremap <C-S-Down> :m '>+1<CR>gv=gv
-vnoremap <C-S-Up> :m '<-2<CR>gv=gv
+nnoremap <C-S-Down> :m .+1<CR>
+nnoremap <C-S-Up> :m .-2<CR>
+inoremap <C-S-Down> <Esc>:m .+1<CR>gi
+inoremap <C-S-Up> <Esc>:m .-2<CR>gi
+vnoremap <C-S-Down> :m '>+1<CR>gv
+vnoremap <C-S-Up> :m '<-2<CR>gv
 
 " Use '>' and '<' to modify lines indentations (supported only in normal/visual mode)
 nnoremap > :><CR>
