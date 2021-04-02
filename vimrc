@@ -1,7 +1,7 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "
 " Dependencies that need to be installed:
-" (*) vim (version 8.0 or above)
+" (*) vim (version 8.1 or above)
 " (*) vim-gtk (to make vim work with system clipboard for copying)
 "
 " Plugins that need to be installed (clone these repos to ~/.vim/pack/<some-name>/start/):
@@ -126,6 +126,9 @@ set autoindent
 " Use '/' in normal mode to search, then 'n' and 'shift-n' to find next/previous
 set incsearch
 
+" Show number of hits when searching
+set shortmess-=S
+
 " Allow to copy straight to the clipboard (only available if 'vim-gtk' is installed)
 " To copy and paste a highlighted text in visual mode, use 'y' to yank, and 'p' to paste
 set clipboard=unnamedplus
@@ -136,3 +139,19 @@ set ttimeoutlen=0
 " Choose color scheme (see /usr/share/vim/vim*/colors for available ones)
 " Best preinstalled schemes for Ubuntu terminal: ron, delek, slate, elflord, desert, koehler
 colorscheme ron
+
+" Allow search within highlighted region in visual mode
+function! RangeSearch(direction)
+  call inputsave()
+  let g:srchstr = input(a:direction)
+  call inputrestore()
+  if strlen(g:srchstr) > 0
+    let g:srchstr = g:srchstr.
+          \ '\%>'.(line("'<")-1).'l'.
+          \ '\%<'.(line("'>")+1).'l'
+  else
+    let g:srchstr = ''
+  endif
+endfunction
+vnoremap <silent> / :<C-U>call RangeSearch('/')<CR>:if strlen(g:srchstr) > 0\|exec '/'.g:srchstr\|endif<CR>
+vnoremap <silent> ? :<C-U>call RangeSearch('?')<CR>:if strlen(g:srchstr) > 0\|exec '?'.g:srchstr\|endif<CR>
