@@ -33,6 +33,7 @@
 " (*) Jump: https://vi.stackexchange.com/questions/3052/how-to-jump-only-in-currently-open-file
 " (*) How to set a bookmark and return to it later?
 " (*) Code navigation for common languages (C++/Java/Python)?
+" (*) Research fuzzy search: https://github.com/junegunn/fzf.vim
 " (*) Display filetree with NERDTree? Also how to browse/search through some files from within Vim?
 " (*) Best and easiest way to do multiline editing (both inserting and deleting)?
 "
@@ -48,7 +49,7 @@ inoremap <F5> <C-O>:source ~/.vimrc<CR>
 
 " Use Ctrl+E to enter visual mode
 noremap <C-E> :normal! v<CR>
-inoremap <C-E> <C-O>:normal! v<CR>
+inoremap <C-E> <Esc>`^:normal! v<CR>
 
 " Save a file with Ctrl-S
 " Remember to add the following to your bashrc file to free up Ctrl+S and Ctrl+Q:
@@ -86,11 +87,11 @@ inoremap <C-S-Up> <Esc>:m .-2<CR>gi
 vnoremap <C-S-Down> :m '>+1<CR>gv
 vnoremap <C-S-Up> :m '<-2<CR>gv
 
-" Use '>' and '<' to modify lines indentations (supported only in normal/visual mode)
-nnoremap > :><CR>
-nnoremap < :<<CR>
-vnoremap > >gv
-vnoremap < <gv
+" Use '<' and '>' to respectively indent and shift-indent (in normal/visual mode only)
+nnoremap > :<<CR>
+nnoremap < :><CR>
+vnoremap > <gv
+vnoremap < >gv
 
 " Jump back and forth with Ctrl-Shift-Left/Right
 noremap <C-S-Left> <C-O>
