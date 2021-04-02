@@ -17,3 +17,5 @@ Deploy the configurations with root:
 If you don't have root, you can also run the script without `sudo` (but note that this may make some configurations to not work as expected, due to missing dependencies):
 
     ./deploy_on_linux.sh
+
+Note that the deploy script only creates symlinks that map to the configuration files in this repo. That way, updating the configurations can be as simple as doing a `git pull`.
