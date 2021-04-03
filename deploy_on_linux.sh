@@ -4,13 +4,6 @@
 
 cd $(dirname "${BASH_SOURCE[0]}")
 
-function install_dependencies
-{
-    if [ "$EUID" -eq 0 ]; then
-        sudo apt install --yes --upgrade $@
-        echo ""
-    fi
-}
 function install_vim_extension
 {
     install_dir=~/.vim/pack/$1/start
@@ -19,11 +12,19 @@ function install_vim_extension
     ln --symbolic --force --relative vim_extensions/$1 $install_dir/$1
 }
 
+if [ "$EUID" -eq 0 ]; then
+    echo "[INFO] Running with SUDO, installing dependencies"
+    sudo add-apt-repository ppa:jonathonf/vim --yes
+    sudo apt update
+    sudo apt install --yes --upgrade vim vim-gtk tmux xclip
+    echo ""
+else
+    echo "[INFO] Running without SUDO"
+fi
+
 echo "[INFO] Deploying TMUX configs"
 ln --symbolic --force --relative tmux.conf ~/.tmux.conf
-install_dependencies xclip
 
 echo "[INFO] Deploying VIM configs"
 ln --symbolic --force --relative vimrc ~/.vimrc
 install_vim_extension nerdcommenter
-install_dependencies vim vim-gtk
