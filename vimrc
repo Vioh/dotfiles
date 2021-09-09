@@ -60,9 +60,9 @@ inoremap <C-E> <Esc>`^:normal! v<CR>
 noremap <C-S> :w<CR>
 inoremap <C-S> <C-O>:w<CR>
 
-" Remove a line with Ctrl-K
-noremap <C-K> dd
-inoremap <C-K> <C-O>dd
+" Remove a line with Ctrl-K (use black-hole register "_ to avoid copying to system clipboard)
+noremap <C-K> "_dd
+inoremap <C-K> <C-O>"_dd
 
 " Undo and Redo with Ctrl-U and Ctrl-Y
 noremap <C-U> u
