@@ -23,8 +23,8 @@ else
 fi
 
 echo "[INFO] Deploying TMUX configs"
-ln --symbolic --force --relative tmux.conf ~/.tmux.conf
+ln --symbolic --force --relative linux/tmux.conf ~/.tmux.conf
 
 echo "[INFO] Deploying VIM configs"
-ln --symbolic --force --relative vimrc ~/.vimrc
+ln --symbolic --force --relative linux/vimrc ~/.vimrc
 install_vim_extension nerdcommenter

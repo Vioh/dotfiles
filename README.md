@@ -2,13 +2,12 @@
 
 This repo contains useful configurations for my personal work setup.
 
-## Configurations
-
-* [`tmux.conf`](tmux.conf): Configuration file for TMUX, should be copied to `~/.tmux.conf`.
-* [`vimrc`](vimrc): Configuration file for Vim, should be copied to `~/.vimrc`.
-* [`vscode`](https://gist.github.com/Vioh/061a4acd1a94029d0753f2bf9b7c7c1e): Settings and preferences for my vscode setup, which can be deployed by using the [Settings Sync extension](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync).
-
 ## How to deploy on Linux
+
+Configurations:
+* [`tmux.conf`](linux/tmux.conf): Configuration file for TMUX, should be copied to `~/.tmux.conf`.
+* [`vimrc`](linux/vimrc): Configuration file for Vim, should be copied to `~/.vimrc`.
+* [`vscode`](https://gist.github.com/Vioh/061a4acd1a94029d0753f2bf9b7c7c1e): Settings and preferences for my vscode setup, which can be deployed by using the [Settings Sync extension](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync).
 
 Clone the repo recursively to get all submodules:
 
