@@ -1,0 +1,69 @@
+{
+    "security.workspace.trust.untrustedFiles": "open",
+    "bookmarks.navigateThroughAllFiles": false,
+    "editor.copyWithSyntaxHighlighting": false,
+    "editor.minimap.enabled": false,
+    "editor.renderWhitespace": "all",
+    "editor.rulers": [120],
+    "gitlens.codeLens.enabled": false,
+    "markdown.extension.list.indentationSize": "4",
+    "markdown.extension.toc.updateOnSave": false,
+    "markdown.extension.toc.unorderedList.marker": "*",
+    "todohighlight.defaultStyle": {
+        "color": "yellow",
+        "backgroundColor": "rgba(0,0,0,0)"
+    },
+    "todohighlight.keywordsPattern": "TODO\\(.*\\):|TODO==>|TODO:|TODO",
+    "workbench.colorCustomizations": {
+        "tree.indentGuidesStroke": "#91ff00"
+    },
+    "workbench.tree.indent": 12,
+    "files.exclude": {
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true
+    },
+    "java.project.importHint": false,
+    "explorer.confirmDragAndDrop": false,
+    "extensions.ignoreRecommendations": true,
+    "[cpp]": {
+        "editor.defaultFormatter": "xaver.clang-format"
+    },
+    "diffEditor.renderSideBySide": false,
+    "files.associations": {
+        "*.txt": "log",
+        "*.bp": "java",
+        "*.proto": "java",
+        "BUILD": "shellscript",
+        "*.te": "shellscript",
+        "*.aidl": "java",
+        "*.rc": "shellscript",
+        "*.fs": "shellscript"
+    },
+    "workbench.startupEditor": "newUntitledFile",
+    "files.watcherExclude": {
+        "**/bazel-*/**": true
+    },
+    "workbench.editorAssociations": {
+        "*.txt": "default"
+    },
+    "workbench.editor.untitled.hint": "hidden",
+    "security.workspace.trust.enabled": false,
+    "markdown-pdf.displayHeaderFooter": false,
+    "markdown-pdf.margin.top": "0.5cm",
+    "markdown-pdf.margin.bottom": "0.5cm",
+    "markdown-pdf.margin.left": "0.5cm",
+    "markdown-pdf.margin.right": "0.5cm",
+    "[javascript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "window.zoomLevel": 2,
+    "workbench.activityBar.location": "hidden",
+    "editor.stickyScroll.scrollWithEditor": false,
+    "workbench.tree.enableStickyScroll": false,
+    "editor.stickyScroll.enabled": false,
+    "editor.mouseWheelZoom": true,
+    "terminal.integrated.defaultProfile.osx": "bash",
+    "explorer.confirmDelete": false
+}
