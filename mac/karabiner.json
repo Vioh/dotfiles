@@ -423,6 +423,24 @@
                         "description": "Linux Shortcuts",
                         "manipulators": [
                             {
+                                "description": "ctrl+cmd+t for opening a new iterm2 window",
+                                "from": {
+                                    "key_code": "t",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "left_control",
+                                            "left_command"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "shell_command": "osascript -e 'tell application \"iTerm\" to create window with default profile'"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
                                 "description": "ctrl+a for select all",
                                 "from": {
                                     "key_code": "a",
@@ -444,7 +462,7 @@
                                     {
                                         "type": "frontmost_application_unless",
                                         "bundle_identifiers": [
-                                            "^.*(Terminal|VSCode|intellij).*$"
+                                            "^.*(iterm2|VSCode|intellij).*$"
                                         ]
                                     }
                                 ],
@@ -492,7 +510,7 @@
                                     {
                                         "type": "frontmost_application_unless",
                                         "bundle_identifiers": [
-                                            "^.*(Terminal|VSCode|intellij).*$"
+                                            "^.*(iterm2|VSCode|intellij).*$"
                                         ]
                                     }
                                 ],
