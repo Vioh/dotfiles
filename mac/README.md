@@ -86,6 +86,8 @@ App shortcuts:
     * New Private Window: ctrl+shift+p
     * Bookmark All Tabs...: ctrl+shift+d
     * Manage Bookmarks: ctrl+shift+o
+* Intellij.app:
+    * Hide IntelliJ IDEA: Any random unused shortcut
 
 # Alt+Tab
 

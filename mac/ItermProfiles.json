@@ -283,6 +283,7 @@
     "Green Component" : 0.8833775520324707
   },
   "AWDS Pane Directory" : "",
+  "Treat Option as Alt" : true,
   "Ansi 14 Color" : {
     "Red Component" : 0.20392156862745098,
     "Color Space" : "P3",
@@ -493,31 +494,31 @@
     "Green Component" : 0.84313725490196079
   },
   "Keyboard Map" : {
+    "0x76-0x100000-0x9" : {
+      "Version" : 2,
+      "Apply Mode" : 0,
+      "Action" : 28,
+      "Text" : "5AA1328E-979B-40F3-974D-F74739DFB3C4",
+      "Escaping" : 2
+    },
+    "0xf72d-0x100000-0x79" : {
+      "Version" : 2,
+      "Apply Mode" : 0,
+      "Action" : 67,
+      "Text" : "",
+      "Escaping" : 2
+    },
+    "0xf72c-0x100000-0x74" : {
+      "Version" : 2,
+      "Apply Mode" : 0,
+      "Action" : 68,
+      "Text" : "",
+      "Escaping" : 2
+    },
     "0x6e-0x40000-0x2d" : {
       "Version" : 2,
       "Apply Mode" : 0,
       "Action" : 26,
-      "Text" : "5AA1328E-979B-40F3-974D-F74739DFB3C4",
-      "Escaping" : 2
-    },
-    "0x74-0x40000-0x11" : {
-      "Version" : 2,
-      "Apply Mode" : 0,
-      "Action" : 27,
-      "Text" : "5AA1328E-979B-40F3-974D-F74739DFB3C4",
-      "Escaping" : 2
-    },
-    "0xf703-0x300000-0x7c" : {
-      "Version" : 2,
-      "Apply Mode" : 0,
-      "Action" : 19,
-      "Text" : "",
-      "Escaping" : 2
-    },
-    "0x68-0x100000-0x4" : {
-      "Version" : 2,
-      "Apply Mode" : 0,
-      "Action" : 29,
       "Text" : "5AA1328E-979B-40F3-974D-F74739DFB3C4",
       "Escaping" : 2
     },
@@ -528,18 +529,18 @@
       "Text" : "",
       "Escaping" : 2
     },
+    "0x74-0x40000-0x11" : {
+      "Version" : 2,
+      "Apply Mode" : 0,
+      "Action" : 27,
+      "Text" : "5AA1328E-979B-40F3-974D-F74739DFB3C4",
+      "Escaping" : 2
+    },
     "0xf700-0x300000-0x7e" : {
       "Version" : 2,
       "Apply Mode" : 0,
       "Action" : 20,
       "Text" : "",
-      "Escaping" : 2
-    },
-    "0x76-0x100000-0x9" : {
-      "Version" : 2,
-      "Apply Mode" : 0,
-      "Action" : 28,
-      "Text" : "5AA1328E-979B-40F3-974D-F74739DFB3C4",
       "Escaping" : 2
     },
     "0x56-0x60000-0x9" : {
@@ -560,6 +561,27 @@
       "Version" : 2,
       "Apply Mode" : 0,
       "Action" : 18,
+      "Text" : "",
+      "Escaping" : 2
+    },
+    "0x7f-0x80000-0x33" : {
+      "Version" : 2,
+      "Apply Mode" : 0,
+      "Action" : 11,
+      "Text" : "0x17",
+      "Escaping" : 2
+    },
+    "0x68-0x100000-0x4" : {
+      "Version" : 2,
+      "Apply Mode" : 0,
+      "Action" : 29,
+      "Text" : "5AA1328E-979B-40F3-974D-F74739DFB3C4",
+      "Escaping" : 2
+    },
+    "0xf703-0x300000-0x7c" : {
+      "Version" : 2,
+      "Apply Mode" : 0,
+      "Action" : 19,
       "Text" : "",
       "Escaping" : 2
     }
@@ -770,7 +792,7 @@
     "Alpha Component" : 1,
     "Green Component" : 0.099111050367355347
   },
-  "Guid" : "75CBBCC1-505F-45E7-8A54-B9B045DBEF49",
+  "Guid" : "6A28A3B9-DB57-4CCC-A786-9714180224A5",
   "Cursor Color (Dark)" : {
     "Red Component" : 0.99997633695602417,
     "Color Space" : "sRGB",
@@ -1016,6 +1038,7 @@
 
   ],
   "AWDS Pane Directory" : "",
+  "Treat Option as Alt" : true,
   "Ansi 14 Color" : {
     "Red Component" : 0.20392156862745098,
     "Color Space" : "P3",
@@ -1232,11 +1255,39 @@
     "Green Component" : 0.84313725490196079
   },
   "Keyboard Map" : {
+    "0x76-0x100000-0x9" : {
+      "Version" : 2,
+      "Apply Mode" : 0,
+      "Action" : 28,
+      "Text" : "5AA1328E-979B-40F3-974D-F74739DFB3C4",
+      "Escaping" : 2
+    },
+    "0xf72d-0x100000-0x79" : {
+      "Version" : 2,
+      "Apply Mode" : 0,
+      "Action" : 67,
+      "Text" : "",
+      "Escaping" : 2
+    },
+    "0xf72c-0x100000-0x74" : {
+      "Version" : 2,
+      "Apply Mode" : 0,
+      "Action" : 68,
+      "Text" : "",
+      "Escaping" : 2
+    },
     "0x6e-0x40000-0x2d" : {
       "Version" : 2,
       "Apply Mode" : 0,
       "Action" : 26,
       "Text" : "5AA1328E-979B-40F3-974D-F74739DFB3C4",
+      "Escaping" : 2
+    },
+    "0xf701-0x300000-0x7d" : {
+      "Version" : 2,
+      "Apply Mode" : 0,
+      "Action" : 21,
+      "Text" : "",
       "Escaping" : 2
     },
     "0x74-0x40000-0x11" : {
@@ -1250,28 +1301,7 @@
       "Version" : 2,
       "Apply Mode" : 0,
       "Action" : 27,
-      "Text" : "75CBBCC1-505F-45E7-8A54-B9B045DBEF49",
-      "Escaping" : 2
-    },
-    "0xf703-0x300000-0x7c" : {
-      "Version" : 2,
-      "Apply Mode" : 0,
-      "Action" : 19,
-      "Text" : "",
-      "Escaping" : 2
-    },
-    "0x68-0x100000-0x4" : {
-      "Version" : 2,
-      "Apply Mode" : 0,
-      "Action" : 29,
-      "Text" : "5AA1328E-979B-40F3-974D-F74739DFB3C4",
-      "Escaping" : 2
-    },
-    "0xf701-0x300000-0x7d" : {
-      "Version" : 2,
-      "Apply Mode" : 0,
-      "Action" : 21,
-      "Text" : "",
+      "Text" : "6A28A3B9-DB57-4CCC-A786-9714180224A5",
       "Escaping" : 2
     },
     "0xf700-0x300000-0x7e" : {
@@ -1279,13 +1309,6 @@
       "Apply Mode" : 0,
       "Action" : 20,
       "Text" : "",
-      "Escaping" : 2
-    },
-    "0x76-0x100000-0x9" : {
-      "Version" : 2,
-      "Apply Mode" : 0,
-      "Action" : 28,
-      "Text" : "5AA1328E-979B-40F3-974D-F74739DFB3C4",
       "Escaping" : 2
     },
     "0x56-0x60000-0x9" : {
@@ -1306,6 +1329,27 @@
       "Version" : 2,
       "Apply Mode" : 0,
       "Action" : 18,
+      "Text" : "",
+      "Escaping" : 2
+    },
+    "0x68-0x100000-0x4" : {
+      "Version" : 2,
+      "Apply Mode" : 0,
+      "Action" : 29,
+      "Text" : "5AA1328E-979B-40F3-974D-F74739DFB3C4",
+      "Escaping" : 2
+    },
+    "0x7f-0x80000-0x33" : {
+      "Version" : 2,
+      "Apply Mode" : 0,
+      "Action" : 11,
+      "Text" : "0x17",
+      "Escaping" : 2
+    },
+    "0xf703-0x300000-0x7c" : {
+      "Version" : 2,
+      "Apply Mode" : 0,
+      "Action" : 19,
       "Text" : "",
       "Escaping" : 2
     }
