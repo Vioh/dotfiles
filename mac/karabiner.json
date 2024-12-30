@@ -31,7 +31,7 @@
                                     {
                                         "type": "frontmost_application_unless",
                                         "bundle_identifiers": [
-                                            "^.*(VSCode|intellij).*$"
+                                            "^.*(iterm2|VSCode|intellij).*$"
                                         ]
                                     }
                                 ],
@@ -58,6 +58,14 @@
                                         ]
                                     }
                                 ],
+                                "conditions": [
+                                    {
+                                        "type": "frontmost_application_unless",
+                                        "bundle_identifiers": [
+                                            "^.*(iterm2).*$"
+                                        ]
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
@@ -75,6 +83,14 @@
                                         "key_code": "e",
                                         "modifiers": [
                                             "left_control"
+                                        ]
+                                    }
+                                ],
+                                "conditions": [
+                                    {
+                                        "type": "frontmost_application_unless",
+                                        "bundle_identifiers": [
+                                            "^.*(iterm2).*$"
                                         ]
                                     }
                                 ],
@@ -98,6 +114,14 @@
                                         "key_code": "down_arrow",
                                         "modifiers": [
                                             "left_command"
+                                        ]
+                                    }
+                                ],
+                                "conditions": [
+                                    {
+                                        "type": "frontmost_application_unless",
+                                        "bundle_identifiers": [
+                                            "^.*(iterm2).*$"
                                         ]
                                     }
                                 ],
@@ -133,7 +157,7 @@
                                     {
                                         "type": "frontmost_application_unless",
                                         "bundle_identifiers": [
-                                            "^.*(VSCode|intellij).*$"
+                                            "^.*(iterm2|VSCode|intellij).*$"
                                         ]
                                     }
                                 ],
@@ -161,6 +185,14 @@
                                         ]
                                     }
                                 ],
+                                "conditions": [
+                                    {
+                                        "type": "frontmost_application_unless",
+                                        "bundle_identifiers": [
+                                            "^.*(iterm2).*$"
+                                        ]
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
@@ -181,6 +213,14 @@
                                         "key_code": "e",
                                         "modifiers": [
                                             "left_control"
+                                        ]
+                                    }
+                                ],
+                                "conditions": [
+                                    {
+                                        "type": "frontmost_application_unless",
+                                        "bundle_identifiers": [
+                                            "^.*(iterm2).*$"
                                         ]
                                     }
                                 ],
@@ -205,6 +245,14 @@
                                         "key_code": "down_arrow",
                                         "modifiers": [
                                             "left_command"
+                                        ]
+                                    }
+                                ],
+                                "conditions": [
+                                    {
+                                        "type": "frontmost_application_unless",
+                                        "bundle_identifiers": [
+                                            "^.*(iterm2).*$"
                                         ]
                                     }
                                 ],
@@ -483,6 +531,14 @@
                                         "key_code": "s",
                                         "modifiers": [
                                             "left_command"
+                                        ]
+                                    }
+                                ],
+                                "conditions": [
+                                    {
+                                        "type": "frontmost_application_unless",
+                                        "bundle_identifiers": [
+                                            "^.*(iterm2).*$"
                                         ]
                                     }
                                 ],

@@ -23,3 +23,13 @@ If you don't have root, you can also run the script without `sudo` (but note tha
     ./deploy_on_linux.sh
 
 Note that the deploy script only creates symlinks that map to the configuration files in this repo. That way, updating the configurations can be as simple as doing a `git pull`.
+
+## How to deploy on MAC
+
+Due to time limitation, no script for MAC has been written yet. So all installations have to be done manually as follows:
+* [`karabiner.json`](mac/karabiner.json): Configuration file for Karabiner Elements, should be copied to `~/.config/karabiner/karabiner.json`.
+* [`ItermProfiles.json`](mac/ItermProfiles.json): Configuration file for Iterm2, and should be imported via Iterm2 GUI.
+* [`vimrc`](linux/vimrc): Configuration file for Vim, should be copied to `~/.vimrc`.
+* [`vscode/settings.json`](mac/vscode/settings.json): Configuration file for vscode, should be copied to `~/Library/Application Support/Code/User/settings.json`.
+* [`vscode/keybindings.json`](mac/vscode/keybindings.json): Shortcuts for vscode, should be copied to `~/Library/Application Support/Code/User/keybindings.json`.
+* [intellij/keymaps_settings.zip](mac/intellij/keymaps_settings.zip): Shortcuts for IntelliJ, should be imported via IntelliJ GUI.
