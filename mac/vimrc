@@ -55,7 +55,7 @@ inoremap <C-E> <Esc>`^:normal! v<CR>
 noremap <C-S> :w<CR>
 inoremap <C-S> <C-O>:w<CR>
 
-" Remove a line with Ctrl-K (use black-hole register "_ to avoid copying to system clipboard)
+" Remove a line with Ctrl-Shift-K (use black-hole register "_ to avoid copying to system clipboard)
 noremap <C-S-K> "_dd
 inoremap <C-S-K> <C-O>"_dd
 

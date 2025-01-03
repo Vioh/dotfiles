@@ -47,7 +47,7 @@ inoremap <F4> <Esc>:q!<CR>
 noremap <F5> :source ~/.vimrc<CR>
 inoremap <F5> <C-O>:source ~/.vimrc<CR>
 
-" Use Ctrl+E to enter visual mode
+" Use Ctrl-E to enter visual mode
 noremap <C-E> :normal! v<CR>
 inoremap <C-E> <Esc>`^:normal! v<CR>
 
@@ -60,9 +60,9 @@ inoremap <C-E> <Esc>`^:normal! v<CR>
 noremap <C-S> :w<CR>
 inoremap <C-S> <C-O>:w<CR>
 
-" Remove a line with Ctrl-K (use black-hole register "_ to avoid copying to system clipboard)
-noremap <C-K> "_dd
-inoremap <C-K> <C-O>"_dd
+" Remove a line with Ctrl-Shift-K (use black-hole register "_ to avoid copying to system clipboard)
+noremap <C-S-K> "_dd
+inoremap <C-S-K> <C-O>"_dd
 
 " Undo and Redo with Ctrl-U and Ctrl-Y
 noremap <C-U> u
@@ -79,13 +79,13 @@ noremap <C-L> :set invnumber<CR>
 inoremap <C-L> <C-O>:set invnumber<CR>
 set number
 
-" Move line(s) up and down with Ctrl-Shift-Up/Down
-nnoremap <C-S-Down> :m .+1<CR>
-nnoremap <C-S-Up> :m .-2<CR>
-inoremap <C-S-Down> <Esc>:m .+1<CR>gi
-inoremap <C-S-Up> <Esc>:m .-2<CR>gi
-vnoremap <C-S-Down> :m '>+1<CR>gv
-vnoremap <C-S-Up> :m '<-2<CR>gv
+" Move line(s) up and down with Ctrl-Up/Down
+nnoremap <C-Down> :m .+1<CR>
+nnoremap <C-Up> :m .-2<CR>
+inoremap <C-Down> <Esc>:m .+1<CR>gi
+inoremap <C-Up> <Esc>:m .-2<CR>gi
+vnoremap <C-Down> :m '>+1<CR>gv
+vnoremap <C-Up> :m '<-2<CR>gv
 
 " Use '<' and '>' to respectively indent and shift-indent (in normal/visual mode only)
 nnoremap > :<<CR>
@@ -139,6 +139,7 @@ set ttimeoutlen=0
 " Choose color scheme (see /usr/share/vim/vim*/colors for available ones)
 " Best preinstalled schemes for Ubuntu terminal: ron, delek, slate, elflord, desert, koehler
 colorscheme ron
+syntax on
 
 " Allow search within highlighted region in visual mode
 function! RangeSearch(direction)
@@ -155,3 +156,6 @@ function! RangeSearch(direction)
 endfunction
 vnoremap <silent> / :<C-U>call RangeSearch('/')<CR>:if strlen(g:srchstr) > 0\|exec '/'.g:srchstr\|endif<CR>
 vnoremap <silent> ? :<C-U>call RangeSearch('?')<CR>:if strlen(g:srchstr) > 0\|exec '?'.g:srchstr\|endif<CR>
+
+" Display cursor position
+set ruler
