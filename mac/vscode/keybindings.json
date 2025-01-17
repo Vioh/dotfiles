@@ -609,5 +609,25 @@
         "key": "shift+alt+i",
         "command": "-editor.action.insertCursorAtEndOfEachLineSelected",
         "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+end",
+        "command": "cursorBottom",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "ctrl+home",
+        "command": "cursorTop",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "ctrl+shift+home",
+        "command": "cursorTopSelect",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "ctrl+shift+end",
+        "command": "cursorBottomSelect",
+        "when": "textInputFocus"
     }
 ]

@@ -64,7 +64,7 @@
                                     {
                                         "type": "frontmost_application_unless",
                                         "bundle_identifiers": [
-                                            "^.*(iterm2).*$"
+                                            "^.*(iterm2|VSCode|intellij).*$"
                                         ]
                                     }
                                 ],
@@ -93,7 +93,7 @@
                                     {
                                         "type": "frontmost_application_unless",
                                         "bundle_identifiers": [
-                                            "^.*(iterm2).*$"
+                                            "^.*(iterm2|VSCode|intellij).*$"
                                         ]
                                     }
                                 ],
@@ -125,7 +125,7 @@
                                     {
                                         "type": "frontmost_application_unless",
                                         "bundle_identifiers": [
-                                            "^.*(iterm2).*$"
+                                            "^.*(iterm2|VSCode|intellij).*$"
                                         ]
                                     }
                                 ],
@@ -195,7 +195,7 @@
                                     {
                                         "type": "frontmost_application_unless",
                                         "bundle_identifiers": [
-                                            "^.*(iterm2).*$"
+                                            "^.*(iterm2|VSCode|intellij).*$"
                                         ]
                                     }
                                 ],
@@ -227,7 +227,7 @@
                                     {
                                         "type": "frontmost_application_unless",
                                         "bundle_identifiers": [
-                                            "^.*(iterm2).*$"
+                                            "^.*(iterm2|VSCode|intellij).*$"
                                         ]
                                     }
                                 ],
@@ -260,7 +260,7 @@
                                     {
                                         "type": "frontmost_application_unless",
                                         "bundle_identifiers": [
-                                            "^.*(iterm2).*$"
+                                            "^.*(iterm2|VSCode|intellij).*$"
                                         ]
                                     }
                                 ],
