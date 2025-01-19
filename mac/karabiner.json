@@ -316,6 +316,14 @@
                                         ]
                                     }
                                 ],
+                                "conditions": [
+                                    {
+                                        "type": "frontmost_application_unless",
+                                        "bundle_identifiers": [
+                                            "^.*(VSCode|intellij).*$"
+                                        ]
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
@@ -337,6 +345,14 @@
                                         "key_code": "right_arrow",
                                         "modifiers": [
                                             "left_option"
+                                        ]
+                                    }
+                                ],
+                                "conditions": [
+                                    {
+                                        "type": "frontmost_application_unless",
+                                        "bundle_identifiers": [
+                                            "^.*(VSCode|intellij).*$"
                                         ]
                                     }
                                 ],
