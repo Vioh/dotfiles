@@ -154,3 +154,6 @@ vnoremap <silent> ? :<C-U>call RangeSearch('?')<CR>:if strlen(g:srchstr) > 0\|ex
 
 " Display cursor position
 set ruler
+
+" https://stackoverflow.com/a/77693708
+autocmd VimEnter * call timer_start(100, { tid -> execute(':u0')})
